@@ -18,8 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('student_id');
             $table->date('join_date');
             $table->double('fee');
-            $table->foriegn('batch_id')->references('id')->on('batches')->onDelete('cascade');
-            $table->forign('student_id')->references('id')->on('students')->onDelete('cascade');
+            $table->foreign('batch_id')->references('id')->on('batches')->onDelete('cascade');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->timestamps();
         });
     }
