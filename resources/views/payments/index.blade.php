@@ -14,6 +14,7 @@
                         <tr>
                             <th>#</th>
                             <th>Enrollment No.</th>
+                            <th>Student Name</th>
                             <th>Paid Date</th>
                             <th>Amount</th>
                             <th>Actions</th>
@@ -24,6 +25,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->enrollment->enroll_no }}</td>
+                            <td>{{ $item->enrollment->student->name }}</td>
                             <td>{{ $item->paid_date }}</td>
                             <td>{{ $item->amount }}</td>
                             <td>
