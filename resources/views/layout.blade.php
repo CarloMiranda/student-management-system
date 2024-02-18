@@ -63,15 +63,12 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><h1>Student Management System</h1></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
                     </div>
                 </nav>
             </div>
@@ -81,7 +78,7 @@
             <div class="col-md 12">
                 <!-- This is a sidebar -->
                 <div class="sidebar">
-                    <a class="active" href="#home">Home</a>
+                    <a class="active" href="{{ url('view') }}">Dashboard</a>
                     <a href="{{ url('/students')}}">Student</a>
                     <a href="{{ url('/teachers') }}">Teacher</a>
                     <a href="{{ url('/courses') }}">Courses</a>
