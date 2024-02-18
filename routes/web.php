@@ -25,18 +25,18 @@ Route::get('/', function () {
     return view('layout');
 });
 
-Route::resource('/view', DashboardController::class);
+Route::resource('/view', DashboardController::class)->names('view');
 
-Route::resource('/students', StudentController::class);
+Route::resource('/students', StudentController::class)->names('students');
 
-Route::resource('/teachers', TeacherController::class);
+Route::resource('/teachers', TeacherController::class)->names('teachers');
 
-Route::resource('/courses', CourseController::class);
+Route::resource('/courses', CourseController::class)->names('course');
 
-Route::resource('/batches', BatchController::class);
+Route::resource('/batches', BatchController::class)->names('batches');
 
-Route::resource('/enrollments', EnrollmentController::class);
+Route::resource('/enrollments', EnrollmentController::class)->names('enrollment');
 
-Route::resource('/payments', PaymentController::class);
+Route::resource('/payments', PaymentController::class)->names('payments');
 
 Route::get('report/report1/{pid}', [ReportController::class,'report1']);

@@ -29,7 +29,7 @@
   }
    
   .sidebar a.active {
-    background-color: #04AA6D;
+    background-color: #8EA1E8;
     color: white;
   }
   
@@ -43,6 +43,42 @@
     padding: 1px 16px;
     height: 1000px;
   }
+
+  /* Dashboard Style */
+
+  .dashboard-box {
+    position: relative;
+  }
+
+  .dashboard-box img {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  .blue {
+    background-color: #2AA8F0;
+  }
+
+  .violet {
+    background-color: #F02ADB
+  }
+
+  .orange {
+    background-color: #F9D261
+  }
+
+  .red {
+    background-color: #F0542A
+  }
+
+  .green {
+    background-color: #54F02A
+  }
+
+  .yellow {
+    background-color: #E1F02A
+  }
   
   @media screen and (max-width: 700px) {
     .sidebar {
@@ -55,6 +91,9 @@
   }
   
   @media screen and (max-width: 400px) {
+    .navbar-brand h1 {
+      font-size: 1.2rem
+    }
     .sidebar a {
       text-align: center;
       float: none;
@@ -75,16 +114,16 @@
         </div>
 
         <div class="row">
-            <div class="col-md 12">
+            <div class="col-md">
                 <!-- This is a sidebar -->
                 <div class="sidebar">
-                    <a class="active" href="{{ url('view') }}">Dashboard</a>
-                    <a href="{{ url('/students')}}">Student</a>
-                    <a href="{{ url('/teachers') }}">Teacher</a>
-                    <a href="{{ url('/courses') }}">Courses</a>
-                    <a href="{{ url('/batches') }}">Batches</a>
-                    <a href="{{ url('/enrollments') }}">Enrollment</a>
-                    <a href="{{ url('/payments')}}">Payment</a>
+                    <a class="{{ (request()->is('view')) ? 'active' : '' }}" href="{{ url('view') }}">Dashboard</a>
+                    <a class="{{ (request()->is('students')) ? 'active' : '' }}" href="{{ url('/students')}}">Student</a>
+                    <a class="{{ (request()->is('teachers')) ? 'active' : '' }}" href="{{ url('/teachers') }}">Teacher</a>
+                    <a class="{{ (request()->is('courses')) ? 'active' : '' }}" href="{{ url('/courses') }}">Courses</a>
+                    <a class="{{ (request()->is('batches')) ? 'active' : '' }}" href="{{ url('/batches') }}">Batches</a>
+                    <a class="{{ (request()->is('enrollments')) ? 'active' : '' }}" href="{{ url('/enrollments') }}">Enrollment</a>
+                    <a class="{{ (request()->is('payments')) ? 'active' : '' }}" href="{{ url('/payments')}}">Payment</a>
                 </div>
             </div>
             <div class="col-md-9">
