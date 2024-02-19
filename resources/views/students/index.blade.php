@@ -8,6 +8,12 @@
             <a href="{{ url('/students/create') }}" class="btn btn-success btn-sm" title="Add New Student">
                 <i class="fa fa-plus" aria-hidden="true">Add New</i>
             </a> <br/> <br/>
+            @if(Session::has('flash_message'))
+                <div class="alert alert-success">
+                    {{ Session::get('flash_message') }}
+                </div>
+                <br/>
+            @endif
             <div class="table-responsive">
                 <table class="table">
                     <thead>
